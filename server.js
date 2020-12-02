@@ -18,11 +18,11 @@ app.get('/'), function(req, res) {
 }
 
 app.get('/home', function(req, res) {
-    res.render('./airport/home');
+    res.render('home');
 });
 
 app.get('/airports', function(req, res) {
-    res.render('./airports/index'), {
+    res.render('./airport/index'), {
         airport: airportDb.getAll()
     }
 })
